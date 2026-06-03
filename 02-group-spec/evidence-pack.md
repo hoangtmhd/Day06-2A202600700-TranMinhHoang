@@ -19,7 +19,7 @@ Nhóm tự dùng thử app Bạch Mai Care và ghi chép lại các điểm gãy
 
 | Observation | Screenshot/link | Path liên quan | Điều học được |
 |---|---|---|---|
-| Khi vào đặt lịch một bác sĩ cụ thể nhưng ngày đó bác sĩ hết lịch hoặc bận đột xuất, app báo không có lịch trống và kết thúc flow. | (Sẽ chèn link ảnh/screenshot thử nghiệm) | Failure Path | Hệ thống không tự động gợi ý ngày khám khác gần nhất của bác sĩ đó, bắt user phải tự bấm quay lại và chọn từng ngày tiếp theo để kiểm tra thủ công. |
+| Khi chọn một bác sĩ cụ thể, app có hiển thị rõ danh sách lịch khám còn trống trong ngày của bác sĩ đó. | (Sẽ chèn link ảnh/screenshot thử nghiệm) | Failure Path | Bệnh nhân bắt buộc phải ấn vào từng bác sĩ để check lịch. Nếu bác sĩ đó hết lịch/bận, hệ thống không tự gợi ý phương án thay thế; user vẫn phải tự mò tìm ngày khác hoặc tự thoát ra bấm vào từng bác sĩ khác cùng khoa để tìm lịch trống một cách thủ công. |
 | Không có tính năng đề xuất bác sĩ thay thế khi bác sĩ mong muốn hết lịch. | (Sẽ chèn link ảnh/screenshot thử nghiệm) | Failure / Low-confidence | Bệnh nhân phải tự mò ra danh sách bác sĩ cùng khoa, tự đọc thông tin học vị/chức vụ để so sánh và chọn lại từ đầu. |
 | Lịch khám của bác sĩ chuyên khoa đầu ngành thay đổi liên tục theo tuần (mổ đột xuất, hội chẩn), dẫn đến thông tin hiển thị trên app dễ bị lệch so với thực tế nếu không đồng bộ thời gian thực. | (Sẽ chèn link ảnh/screenshot thử nghiệm) | Failure Path | Dữ liệu lịch khám có độ động rất cao, hệ thống tĩnh sẽ liên tục tạo ra các giao dịch đặt lịch bị hủy sau đó. |
 
@@ -48,7 +48,7 @@ Nguồn thông tin từ phản hồi của bệnh nhân đi khám tại bệnh v
 
 ```text
 Evidence nổi bật nhất:
-Bệnh nhân có xu hướng gọi điện cho tổng đài bệnh viện để đặt lịch thay vì tự mò trên app khi gặp các sự cố hết lịch hoặc triệu chứng mơ hồ.
+Bệnh nhân dễ cảm thấy nản lòng và thất vọng với app khi phải tự thực hiện quá nhiều thao tác thủ công (nhấp vào từng bác sĩ để check lịch, tự tìm kiếm thay thế khi bác sĩ đích danh bận/hết lịch). Họ nhanh chóng bỏ cuộc và lựa chọn liên hệ trực tiếp với tổng đài bệnh viện để được nhân viên hỗ trợ xử lý nhanh hơn thay vì tiếp tục tự tìm kiếm trên ứng dụng.
 
 Insight:
 Bệnh nhân không chỉ cần một giao diện điền form đặt lịch tĩnh. Họ thực chất cần sự tư vấn cá nhân hóa, hỗ trợ ra quyết định (Decision Support) và giải pháp thay thế linh hoạt (Recovery) ngay lập tức khi phương án ưu tiên của họ (bác sĩ đích danh, ngày khám mong muốn) bị thay đổi đột xuất hoặc hết chỗ.

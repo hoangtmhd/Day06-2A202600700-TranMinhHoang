@@ -18,7 +18,7 @@ Thin SPEC quy định lát cắt sản phẩm (Build Slice) và thiết kế h�
 
 | Evidence | Nguồn | User/pain nói lên điều gì? | SPEC phải đổi gì? |
 |---|---|---|---|
-| Báo hết lịch khám bác sĩ đích danh mà không có gợi ý thay thế. | Self-use app Bạch Mai Care | Bệnh nhân cảm thấy bế tắc khi bác sĩ hết lịch, phải thoát ra tìm thủ công từng ngày/bác sĩ khác. | Chatbot phải chủ động đề xuất lịch trống gần nhất hoặc bác sĩ thay thế tương đương cùng khoa. |
+| Báo hết lịch hoặc bắt tự tìm kiếm thủ công. | Self-use app Bạch Mai Care | Bệnh nhân phải nhấp chọn vào từng bác sĩ để check lịch. Khi hết lịch, họ phải tự mò tìm ngày khác hoặc thoát ra tìm thủ công từng bác sĩ khác cùng khoa. | Chatbot phải chủ động đề xuất lịch trống gần nhất hoặc bác sĩ thay thế tương đương cùng chuyên khoa/chức vụ/học hàm. |
 | Người bệnh gọi điện trực tiếp cho tổng đài khi gặp sự cố đặt lịch. | Phỏng vấn bệnh nhân tại bệnh viện | Khách hàng cần có người tư vấn, thương lượng và đưa ra giải pháp thay thế linh hoạt thay vì tự thao tác. | AI phải đóng vai trò là một trợ lý hội thoại (conversational agent) có tính tương tác cao như nhân viên tổng đài. |
 | Lịch khám của bác sĩ thay đổi liên tục theo ngày khi có sự cố phát sinh. | Nghiên cứu nghiệp vụ y tế | Thông tin lịch khám có độ động cực kỳ cao, dễ xảy ra lỗi đồng bộ dữ liệu. | Tích hợp cơ chế kiểm tra lịch thời gian thực (Real-time Verification) trước khi xác nhận giao dịch. |
 
@@ -28,9 +28,9 @@ Thin SPEC quy định lát cắt sản phẩm (Build Slice) và thiết kế h�
 
 ```text
 User (Bệnh nhân đặt khám bác sĩ đích danh) đang gặp khó ở bước "chọn lịch khám thay thế khi lịch mong muốn bị hết hoặc bác sĩ bận đột xuất",
-vì hệ thống app hiện tại chỉ thông báo hủy/hết lịch và bắt user tự tìm kiếm lại từ đầu một cách thủ công,
-dẫn tới hậu quả là user từ bỏ sử dụng app, chuyển sang gọi điện thoại tổng đài gây quá tải hệ thống, hoặc phải đến bệnh viện xếp hàng chờ đợi trực tiếp.
-Bằng chứng chính là các phản hồi phàn nàn của bệnh nhân về việc không biết đặt bác sĩ nào thay thế khi PGS/TS mong muốn hết lịch, và hành vi quay lại gọi tổng đài bệnh viện.
+vì hệ thống app hiện tại bắt buộc phải nhấp chọn vào từng bác sĩ để kiểm tra và không có cơ chế tự động gợi ý thay thế, bắt user tự tìm kiếm thủ công từ đầu,
+dẫn tới hậu quả là user dễ nản lòng, thất vọng và từ bỏ sử dụng app, chuyển sang gọi điện thoại tổng đài nhờ hỗ trợ nhanh hơn, gây quá tải hệ thống.
+Bằng chứng chính là các phản hồi phàn nàn của bệnh nhân về việc không biết đặt bác sĩ nào thay thế khi PGS/TS mong muốn hết lịch, và hành vi nhanh chóng bỏ app gọi tổng đài.
 ```
 
 ---
